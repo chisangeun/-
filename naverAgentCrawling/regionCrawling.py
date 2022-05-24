@@ -24,7 +24,7 @@ def get_region_info():
     region.select_by_visible_text('서울')
 
     city=Select(driver.find_element(By.ID,'dvsn_no'))
-    city.select_by_visible_text('마포구')
+    city.select_by_visible_text('서초구')
 
 
     # 뉴스 헤드라인 & 링크 & 날짜 크롤링 ** elements => 배열로 저장!!!!

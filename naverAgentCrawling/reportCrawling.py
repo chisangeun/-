@@ -22,9 +22,11 @@ def get_report(lng):
 
     chk=0 # 관리자가 원하는 기간 사이의 정보만 크롤링 하기 위한 변수
     for i in tr:
+        text=i.find_element(By.CSS_SELECTOR,'td.txt > a')
         href=i.find_element(By.CSS_SELECTOR,'td.txt > a').get_attribute('href')
         if chk>=lng:
             break
+        print(text.text)
         print("링크",href)
         chk+=1
     # 만약 페이지가 넘어가면 ?
